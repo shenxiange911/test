@@ -1,0 +1,19 @@
+# 敏感文件
+**/config/*api*.json
+!**/config/*api*.example.json
+*.key
+*.secret
+*.token
+*.env
+
+# 临时文件
+*.pyc
+__pycache__/
+*.log
+.DS_Store
+
+# 输出目录
+outputs/
+*.mp4
+*.mp3
+*.wav

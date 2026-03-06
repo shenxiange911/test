@@ -1,0 +1,105 @@
+{
+  "_comment": "故事分镜模板 - 3×3 网格布局",
+  "_usage": "适用于短视频/动画故事分镜，生成 9 个连续镜头",
+  "_expected_output": "3×3 网格分镜图 → 拆分为 9 张独立图片 → 选择关键镜头生成视频",
+  
+  "task_type": "storyboard",
+  "story_title": "清晨咖啡馆",
+  "story_summary": "一个安静的早晨，咖啡馆里发生的温馨小故事",
+  "duration": "30-60秒短视频",
+  
+  "storyboard": {
+    "layout": "3x3",
+    "total_frames": 9,
+    "aspect_ratio": "16:9 per frame",
+    "scenes": [
+      {
+        "frame": 1,
+        "time": "00:00-00:03",
+        "description": "咖啡馆外景，清晨阳光透过玻璃窗",
+        "camera": "wide shot, establishing shot",
+        "mood": "peaceful, warm"
+      },
+      {
+        "frame": 2,
+        "time": "00:03-00:06",
+        "description": "推门进入，门铃响起",
+        "camera": "POV shot, moving forward",
+        "mood": "welcoming"
+      },
+      {
+        "frame": 3,
+        "time": "00:06-00:09",
+        "description": "咖啡师微笑打招呼",
+        "camera": "medium shot, eye level",
+        "mood": "friendly"
+      },
+      {
+        "frame": 4,
+        "time": "00:09-00:12",
+        "description": "手写菜单特写",
+        "camera": "close-up, slight tilt",
+        "mood": "cozy, artisanal"
+      },
+      {
+        "frame": 5,
+        "time": "00:12-00:18",
+        "description": "制作咖啡过程，蒸汽升腾",
+        "camera": "close-up, slow motion feel",
+        "mood": "craftsmanship"
+      },
+      {
+        "frame": 6,
+        "time": "00:18-00:24",
+        "description": "拉花艺术完成",
+        "camera": "top-down shot, centered",
+        "mood": "satisfying, artistic"
+      },
+      {
+        "frame": 7,
+        "time": "00:24-00:30",
+        "description": "端着咖啡走向窗边座位",
+        "camera": "tracking shot, following",
+        "mood": "relaxed"
+      },
+      {
+        "frame": 8,
+        "time": "00:30-00:36",
+        "description": "坐下，窗外街景",
+        "camera": "over-shoulder shot",
+        "mood": "contemplative"
+      },
+      {
+        "frame": 9,
+        "time": "00:36-00:40",
+        "description": "端起杯子，特写微笑",
+        "camera": "close-up, shallow depth of field",
+        "mood": "content, happy ending"
+      }
+    ]
+  },
+  
+  "image_generation": {
+    "model": "nano-banana-pro",
+    "resolution": "4096x4096",
+    "style": "cinematic, warm tones, natural lighting, film photography",
+    "quality": "high",
+    "consistency": "same location, same character, continuous story"
+  },
+  
+  "video_generation": {
+    "enabled": false,
+    "selected_frames": [1, 5, 6, 9],
+    "model": "kling",
+    "duration": 5,
+    "transitions": "smooth cuts",
+    "_note": "选择关键镜头生成视频，其他镜头保持静态"
+  },
+  
+  "output": {
+    "storyboard_path": "output/storyboard/coffee-shop-3x3.png",
+    "split_frames_dir": "output/storyboard/frames/",
+    "videos_dir": "output/storyboard/videos/",
+    "naming": "frame-{number:02d}_{description}.png"
+  }
+}

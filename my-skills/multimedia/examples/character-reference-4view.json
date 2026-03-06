@@ -1,0 +1,52 @@
+{
+  "_comment": "角色参考图模板 - 四视图（前/后/左/右）",
+  "_usage": "适用于角色设计，生成统一角色的多角度参考图",
+  "_expected_output": "2×2 网格参考图，包含角色的前视图、后视图、左侧视图、右侧视图",
+  
+  "task_type": "character_reference",
+  "character_name": "赛博朋克女战士",
+  "character_description": "未来科幻风格女性角色，短发，机械义肢，战术装备",
+  
+  "reference_sheet": {
+    "layout": "2x2",
+    "views": ["front", "back", "left", "right"],
+    "consistency": "same character, same outfit, same lighting",
+    "background": "neutral gray, character sheet style"
+  },
+  
+  "character_details": {
+    "appearance": {
+      "age": "25岁左右",
+      "hair": "银白色短发，不对称剪裁",
+      "eyes": "蓝色发光义眼",
+      "body": "运动型身材，右臂机械义肢"
+    },
+    "outfit": {
+      "top": "黑色战术背心，发光线条装饰",
+      "bottom": "深灰色战术裤，多口袋设计",
+      "accessories": "腰带工具包，通讯耳机"
+    },
+    "style": "cyberpunk, tactical, futuristic"
+  },
+  
+  "image_generation": {
+    "model": "nano-banana-pro",
+    "resolution": "2048x2048",
+    "prompt_template": "{character_description}, {view} view, character reference sheet, neutral background, consistent lighting, full body",
+    "negative_prompt": "multiple characters, inconsistent design, messy background",
+    "quality": "high"
+  },
+  
+  "consistency_lock": {
+    "enabled": true,
+    "method": "reference_image",
+    "base_image": null,
+    "_note": "首次生成后，将第一张图作为 base_image 锁定外观"
+  },
+  
+  "output": {
+    "reference_sheet_path": "output/character-ref/reference-sheet.png",
+    "split_views_dir": "output/character-ref/views/",
+    "naming": "character-name_view.png"
+  }
+}

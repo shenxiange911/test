@@ -1,0 +1,45 @@
+{
+  "images": {
+    "产品参考图": "产品外观数据源"
+  },
+  "scan_instructions": "深度扫描产品参考图，理解产品结构、材质、细节。",
+  "coordinate_system": "基于参考图建立统一坐标系",
+  "synthesis_instructions": "合成统一 3D 实体，保持外观一致性。",
+  "aspect_ratio": "16:9",
+  "panel_layout": "2×3",
+  "style": "产品摄影风格，专业打光，高端质感",
+  "resolution": "2K",
+  "global_lock": "所有分镜中产品外观严格统一",
+  "panels": [
+    {
+      "position": "Panel 1",
+      "description": "产品正面特写，展示 Logo 和主要特征"
+    },
+    {
+      "position": "Panel 2",
+      "description": "产品侧面视角，展示厚度和侧面细节"
+    },
+    {
+      "position": "Panel 3",
+      "description": "产品背面视角，展示接口和标识"
+    },
+    {
+      "position": "Panel 4",
+      "description": "产品使用场景 1 - 桌面环境"
+    },
+    {
+      "position": "Panel 5",
+      "description": "产品使用场景 2 - 手持特写"
+    },
+    {
+      "position": "Panel 6",
+      "description": "产品使用场景 3 - 完整环境氛围"
+    }
+  ],
+  "rules": [
+    "所有面板禁止添加文字标注、箭头、边框",
+    "保持产品外观在所有分镜中完全一致"
+  ],
+  "negative_prompt": "text, watermark, annotations, arrows, labels, low quality",
+  "guidance_scale": 7.0
+}

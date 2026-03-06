@@ -1,0 +1,39 @@
+{
+  "images": {
+    "多视角参考图": "产品外观数据来源，必须严格遵守",
+    "使用场景参考图": "产品连接方式与使用场景参考，理解连接逻辑后创作，禁止照抄"
+  },
+  "scan_instructions": "系统性解析两张参考图，完整理解产品几何结构、各面空间关系、连接方式与使用场景。所有输出外观必须严格与 IMG_A 一致，丝印文字、LED 位置、接口布局、比例禁止偏差。",
+  "coordinate_system": "基于 IMG_A 视图自动推算坐标系：\nVAR_FRONT（正视图）= XY 平面 → 定义 Z+ 轴为朝向观察者方向（主接口插入方向）\nVAR_BACK（背视图）= Z- 方向\nVAR_TOP（顶视图）= Y+ 方向；VAR_BOTTOM（底视图）= Y- 方向\nVAR_SIDES（侧视图）= X 轴方向\n天线沿 Y+ 轴垂直伸出，与机身成 90°，所有渲染帧严格继承此坐标系",
+  "synthesis_instructions": "以 VAR_FRONT 为基准 → VAR_SIDES 确定深度 → VAR_BACK 闭合背面，强制对齐所有接口与边缘细节。输出坐标系已锁定的统一 3D 实体 \"THE_DEVICE\"，外观严格忠实于 IMG_A。",
+  "aspect_ratio": "16:9",
+  "panel_layout": "2×2",
+  "style": "写实场景摄影风格，自然光，电影感构图",
+  "resolution": "2K",
+  "global_lock": "所有分镜中 THE_DEVICE 的外观/丝印/坐标轴方向严格统一，不因视角或光线变化产生偏差",
+  "panels": [
+    {
+      "position": "Panel A 左上",
+      "description": "产品英雄视角特写，展示整体造型与材质质感"
+    },
+    {
+      "position": "Panel B 右上",
+      "description": "产品正面平铺，丝印文字与接口细节清晰可读"
+    },
+    {
+      "position": "Panel C 左下",
+      "description": "理解 IMG_B 的连接逻辑后重新创作物理连接场景 — 连接方式、接口方向（Z+ 轴）与设备关系与 IMG_B 一致，天线沿 Y+ 轴垂直伸出，场景自然真实"
+    },
+    {
+      "position": "Panel D 右下",
+      "description": "在 IMG_B 场景基础上拉远镜头 — 呈现完整使用环境与氛围，体现产品在真实场景中的使用价值"
+    }
+  ],
+  "rules": [
+    "Panel C / D 连接方式须基于 IMG_B 理解后创作，接口方向与设备关系一致，禁止照抄或自行发明",
+    "标注禁令：所有面板禁止添加任何注解/箭头/标签，产品本身丝印除外"
+  ],
+  "negative_prompt": "blurry, low quality, distorted, deformed, ugly, bad anatomy, extra limbs, missing limbs, floating objects, watermark, text overlay, annotations, arrows, labels",
+  "guidance_scale": 7.5,
+  "num_inference_steps": 50
+}

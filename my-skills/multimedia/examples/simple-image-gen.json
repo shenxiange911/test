@@ -1,0 +1,59 @@
+{
+  "_comment": "简单图片生成模板 - 单张图片",
+  "_usage": "适用于快速生成单张图片，无需分镜或多视图",
+  "_expected_output": "单张高质量图片，可用于海报、封面、概念图等",
+  
+  "task_type": "simple_image",
+  "image_title": "未来城市夜景",
+  "image_description": "赛博朋克风格的未来城市，霓虹灯光，雨夜氛围",
+  
+  "prompt": {
+    "main": "cyberpunk city at night, neon lights reflecting on wet streets, flying cars, towering skyscrapers, rain, cinematic composition",
+    "style": "cyberpunk, sci-fi, cinematic, highly detailed",
+    "mood": "atmospheric, moody, futuristic",
+    "lighting": "neon lights, volumetric lighting, dramatic shadows",
+    "quality": "masterpiece, best quality, 8k, ultra detailed"
+  },
+  
+  "negative_prompt": "low quality, blurry, distorted, ugly, bad anatomy, watermark, text",
+  
+  "image_generation": {
+    "model": "nano-banana-pro",
+    "resolution": "2048x2048",
+    "aspect_ratio": "1:1",
+    "_aspect_ratio_options": {
+      "square": "1:1 (2048x2048)",
+      "landscape": "16:9 (2048x1152)",
+      "portrait": "9:16 (1152x2048)",
+      "wide": "21:9 (2048x878)"
+    },
+    "seed": null,
+    "_note": "seed 为 null 时随机生成，设置固定值可复现结果"
+  },
+  
+  "post_processing": {
+    "upscale": false,
+    "upscale_factor": 2,
+    "enhance": false,
+    "_note": "可选的后处理步骤，需要额外工具支持"
+  },
+  
+  "variations": {
+    "enabled": false,
+    "count": 3,
+    "_note": "生成多个变体，使用不同 seed"
+  },
+  
+  "output": {
+    "image_path": "output/simple-image/future-city-night.png",
+    "save_prompt": true,
+    "prompt_file": "output/simple-image/future-city-night_prompt.txt"
+  },
+  
+  "examples": {
+    "_example_1": "人物肖像：portrait of a warrior princess, fantasy art, detailed armor, dramatic lighting",
+    "_example_2": "自然风景：mountain landscape at sunset, dramatic clouds, golden hour, photorealistic",
+    "_example_3": "产品设计：futuristic smartphone concept, sleek design, holographic display, product photography",
+    "_example_4": "抽象艺术：abstract digital art, flowing colors, geometric shapes, modern art style"
+  }
+}

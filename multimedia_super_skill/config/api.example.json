@@ -1,0 +1,14 @@
+{
+  "gemini": {
+    "apiKey": "YOUR_API_KEY",
+    "baseUrl": "https://api.example.com",
+    "model": "gemini-2.5-pro"
+  },
+  "tools": {
+    "banana2": { "mode": "mock", "command": "banana2", "baseUrl": "" },
+    "image2video": { "mode": "mock", "command": "img2video", "baseUrl": "" },
+    "ref_image_search": { "mode": "mock", "baseUrl": "" },
+    "storyboard_gen": { "mode": "mock", "baseUrl": "" },
+    "ffmpeg": { "mode": "auto" }
+  }
+}
